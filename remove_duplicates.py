@@ -15,9 +15,14 @@ class Solution:
 
         k = 1
 
-        for i in range(1, len(nums)):
+        for i in range(1, len(nums)):  # i = 1
             if nums[i] != nums[i - 1]: # Проверяю уникальный или нет
                 nums[k] = nums[i] # Перезаписываю уникальные в начало
                 k += 1
 
         return k
+
+
+s = Solution()
+a = [1, 1, 1, 2, 2, 3, 4, 4, 5, 5, 6]
+print(s.removeDuplicates(a))
