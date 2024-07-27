@@ -16,8 +16,8 @@ class Solution:
         k = 1
 
         for i in range(1, len(nums)):
-            if nums[i] != nums[i - 1]:
-                nums[k] = nums[i]
+            if nums[i] != nums[i - 1]: # Проверяю уникальный или нет
+                nums[k] = nums[i] # Перезаписываю уникальные в начало
                 k += 1
 
         return k
