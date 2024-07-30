@@ -22,7 +22,7 @@ class Solution:
             left_less = left_more = right_less = right_more = 0
 
             for i in range(j):
-                if rating[i] < rating[j]:
+                if rating[i] < rating[j]: 
                     left_less += 1
                 if rating[i] > rating[j]:
                     left_more += 1
@@ -74,3 +74,5 @@ if __name__ == '__main__':
     print(s.numTeams(rating1))
     print(s.numTeams(rating2))
     print(s.numTeams(rating3))
+    a = range(5) # 0-4
+
