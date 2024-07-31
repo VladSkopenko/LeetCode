@@ -11,3 +11,8 @@ class Solution:
             if prices[i] < prices[i+1]:
                 profit += prices[i+1] - prices[i]
         return profit
+
+
+if __name__ == "__main__":
+    prices = [7, 1, 5, 3, 6, 4]
+    print(Solution().maxProfit(prices))

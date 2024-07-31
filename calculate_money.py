@@ -22,4 +22,5 @@ class Solution:
             result += current
 
         return result
-    
+if __name__ == "__main__":
+    print(Solution.totalMoney(20))
