@@ -1,5 +1,5 @@
 class Solution:
-    def intToRoman(self, num: int) -> str:
+    def int_to_roman(self, num: int) -> str:
         values = [
             1000, 900, 500, 400,
             100, 90, 50, 40,
@@ -13,9 +13,7 @@ class Solution:
             "I"
         ]
 
-
         roman_numeral = ""
-
 
         for i in range(len(values)):
             while num >= values[i]:

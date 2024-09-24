@@ -7,7 +7,7 @@ s1 = "abcabcbb"
 
 
 class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
+    def length_of_longest_substring(self, s: str) -> int:
         n = len(s)
         dict_c = {}
         for i in range(n):
@@ -24,4 +24,4 @@ class Solution:
 
 
 if __name__ == "__main__":
-    print(Solution().lengthOfLongestSubstring(s1))
+    print(Solution().length_of_longest_substring(s1))
