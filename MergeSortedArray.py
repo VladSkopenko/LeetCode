@@ -12,9 +12,11 @@ To accommodate this, nums1 has a length of m + n, where the first m elements den
 
 def merge_two_sorted_arrays(nums1, nums2):
     result = []
+    n = len(nums1)
+    m = len(nums2)
     i, j = 0, 0
 
-    while i < len(nums1) and j < len(nums2):
+    while i < n and j < m:
         if nums1[i] < nums2[j]:
             result.append(nums1[i])
             i += 1
@@ -34,6 +36,6 @@ def merge_two_sorted_arrays(nums1, nums2):
 
 
 if __name__ == "__main__":
-    nums1 = [1, 2, 3, 5]
+    nums1 = [1, 2, 3, 5, 5, 5, 5, 6]
     nums2 = [2, 5, 6]
     merge_two_sorted_arrays(nums1, nums2)
