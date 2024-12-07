@@ -3,6 +3,7 @@
 If there is no common prefix, return an empty string "".
 
 """
+
 from typing import List
 
 

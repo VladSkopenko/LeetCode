@@ -12,7 +12,7 @@ class Solution:
 
         reversed_x *= sign
 
-        if reversed_x < - 2 ** 31 or reversed_x > 2 ** 31 - 1:
+        if reversed_x < -(2**31) or reversed_x > 2**31 - 1:
             return 0
 
         return reversed_x

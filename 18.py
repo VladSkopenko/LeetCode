@@ -10,6 +10,7 @@ Example 1:
 Input: nums = [1,0,-1,0,-2,2], target = 0
 Output: [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
 """
+
 from typing import List
 
 
@@ -22,14 +23,27 @@ class Solution:
             if first_index > 0 and nums[first_index] == nums[first_index - 1]:
                 continue
             for second_index in range(first_index + 1, len_nums - 2):
-                if second_index > first_index + 1 and nums[second_index] == nums[second_index - 1]:
+                if (
+                    second_index > first_index + 1
+                    and nums[second_index] == nums[second_index - 1]
+                ):
                     continue
                 left = second_index + 1
                 right = len_nums - 1
                 while left < right:
-                    current_sum = nums[first_index] + nums[second_index] + nums[left] + nums[right]
+                    current_sum = (
+                        nums[first_index]
+                        + nums[second_index]
+                        + nums[left]
+                        + nums[right]
+                    )
                     if target == current_sum:
-                        r = [nums[first_index], nums[second_index], nums[left], nums[right]]
+                        r = [
+                            nums[first_index],
+                            nums[second_index],
+                            nums[left],
+                            nums[right],
+                        ]
                         result.append(r)
                         left += 1
                         right -= 1

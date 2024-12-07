@@ -1,10 +1,11 @@
-'''There are n soldiers standing in a line. Each soldier is assigned a unique rating value.
+"""There are n soldiers standing in a line. Each soldier is assigned a unique rating value.
 
 You have to form a team of 3 soldiers amongst them under the following rules:
 
 Choose 3 soldiers with index (i, j, k) with rating (rating[i], rating[j], rating[k]).
 A team is valid if: (rating[i] < rating[j] < rating[k]) or (rating[i] > rating[j] > rating[k]) where (0 <= i < j < k < n).
-Return the number of teams you can form given the conditions. (soldiers can be part of multiple teams).'''
+Return the number of teams you can form given the conditions. (soldiers can be part of multiple teams)."""
+
 from typing import List
 
 rating1 = [2, 5, 3, 4, 1]  # 3
@@ -22,7 +23,7 @@ class Solution:
             left_less = left_more = right_less = right_more = 0
 
             for i in range(j):
-                if rating[i] < rating[j]: 
+                if rating[i] < rating[j]:
                     left_less += 1
                 if rating[i] > rating[j]:
                     left_more += 1
@@ -69,10 +70,9 @@ class Solution:
 
 # Однако на самом деле команда с элементами rating[1], rating[2], rating[3] не является валидной,
 # поэтому общее количество валидных команд: 3 (rating[0], rating[2], rating[3], rating[0], rating[3], rating[4], rating[2], rating[3], rating[4])
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.numTeams(rating1))
     print(s.numTeams(rating2))
     print(s.numTeams(rating3))
-    a = range(5) # 0-4
-
+    a = range(5)  # 0-4

@@ -13,11 +13,10 @@ class Solution:
                 left -= 1
                 right += 1
 
-            return s[left + 1:right]
+            return s[left + 1 : right]
 
         longest = ""
         for i in range(len(s)):
-
             odd_palindrome = expandAroundCenter(i, i)
             if len(odd_palindrome) > len(longest):
                 longest = odd_palindrome

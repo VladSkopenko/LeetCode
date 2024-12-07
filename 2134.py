@@ -20,6 +20,4 @@ class Solution:
         return min_swaps
 
 
-
-
 print(Solution.minSwaps(input_list))

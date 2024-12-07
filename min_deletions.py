@@ -10,23 +10,23 @@ You can delete any number of characters in s to make s balanced. s is balanced i
 Return the minimum number of deletions needed to make s balanced.
 """
 
+
 class Solution:
     def minimumDeletions(self, s: str) -> int:
-        a_right = s.count('a')
+        a_right = s.count("a")
         b_left = 0
 
         min_deletions = a_right
 
         for c in s:
-            if c == 'a':
+            if c == "a":
                 a_right -= 1
-            else: # c == 'b'
+            else:  # c == 'b'
                 b_left += 1
 
             min_deletions = min(min_deletions, a_right + b_left)
 
         return min_deletions
-
 
 
 a = "aaabbba"

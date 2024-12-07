@@ -8,13 +8,14 @@ class ListNode:
 
 
 class Solution:
-    def add_two_numbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+    def add_two_numbers(
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         dummy = ListNode()
         current = dummy
         carry = 0
 
         while l1 or l2 or carry:
-
             val1 = l1.val if l1 else 0
             val2 = l2.val if l2 else 0
 
@@ -35,4 +36,3 @@ class Solution:
 
 l1 = [2, 4, 3]
 l2 = [5, 6, 4]
-
