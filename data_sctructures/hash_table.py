@@ -1,5 +1,4 @@
 class HashTable:
-
     def __init__(self):
         self.table = [None] * 100
 
@@ -14,6 +13,7 @@ class HashTable:
         index = self.hash_function(key)
         return self.table[index]
 
+
 ha_tab = HashTable()
 ha_tab.insert(1, "one")
 ha_tab.insert(2, "two")
@@ -24,6 +24,6 @@ ha_tab.insert(6, "six")
 ha_tab.insert(7, "seven")
 ha_tab.insert(8, "eight")
 ha_tab.insert(9, "nine")
-ha_tab.insert(10, "ten")
+ha_tab.insert(145, "ten")
 
-print(ha_tab.get(5))
+print(ha_tab.get(145))
