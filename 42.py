@@ -2,7 +2,8 @@ from typing import List
 
 
 class Solution:
-    def trap(self, height: List[int]) -> int:
+    @staticmethod
+    def trap(height: List[int]) -> int:
         if not height:
             return 0
 
@@ -27,7 +28,5 @@ class Solution:
         return water_trapped
 
 
-# Example usage:
-solution = Solution()
-result = solution.trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1])  # Example elevation map
+result = Solution.trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1])
 print(result)
