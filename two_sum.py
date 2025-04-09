@@ -10,7 +10,7 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def twoSum(nums: List[int], target: int) -> List[int]:
+    def two_sum(nums: List[int], target: int) -> List[int]:
         num_to_index = {}
         for i, num in enumerate(nums):
             num_to_index[num] = i
@@ -22,4 +22,4 @@ class Solution:
 if __name__ == "__main__":
     nums = [2, 7, 11, 15]
     target = 9
-    print(Solution.twoSum(nums, target))
+    print(Solution.two_sum(nums, target))
