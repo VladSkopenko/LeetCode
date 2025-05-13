@@ -1,4 +1,4 @@
-target_id = 1
+target_name = "Rex"
 target_type = "dog"
 
 data = [
@@ -9,7 +9,7 @@ data = [
 ]
 
 result = next(
-    (item for item in data if item["id"] == target_id and item["type"] == target_type),
+    (item for item in data if item["name"] == target_name and item["type"] == target_type),
     None
 )
 
